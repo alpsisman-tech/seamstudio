@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# dependencies (none required — this is a static site)
+node_modules/
+
+# local env / build artifacts
+.env
+.env.*
+.netlify/
+dist/

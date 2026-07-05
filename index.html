@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seam Studio — An AI product studio building tools that work on the floor</title>
+<meta name="description" content="Seam Studio is an independent AI product studio. We design and build AI-native software for real industries — textile quality control (Seam), manufacturing quotes (Quotewright), and hospitality guest care (Misafir). Built on real operations, always with a human in the loop.">
+<meta name="theme-color" content="#0A0B10">
+<meta property="og:title" content="Seam Studio — AI products built on real operations">
+<meta property="og:description" content="An independent AI product studio behind Seam, Quotewright, and Misafir. We build AI that earns its place on the factory floor.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="selvedge" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Seam Studio home">
+      <img class="brand-mark" src="favicon.svg" alt="" width="32" height="32">
+      <span><b>Seam</b> <span class="st">Studio</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="ventures.html">Ventures</a></li>
+      <li><a href="studio.html">Studio</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-thread btn-sm nav-cta" href="contact.html">Start a project</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="ventures.html">Ventures</a>
+  <a href="studio.html">Studio</a>
+  <a href="index.html#approach">Approach</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-cta">
+    <a class="btn btn-thread" href="contact.html">Start a project</a>
+    <a class="btn btn-ghost" href="ventures.html">See the ventures</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-blob b1"></div>
+    <div class="hero-blob b2"></div>
+    <div class="hero-blob b3"></div>
+    <div class="hero-grid"></div>
+    <canvas id="threads"></canvas>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="badge rv"><span class="dot"></span>Independent AI product studio · İstanbul & London</span>
+    <h1 class="rv rv-d1">We build AI that earns its<br>place on the <span class="woven grad-text">factory floor</span>.</h1>
+    <p class="lead rv rv-d2">Seam Studio designs and ships AI-native software for industries that don't get glossy demos — textile mills, manufacturers, hoteliers. Three ventures, one method: build on real operations, keep a human in the loop, and never invent what we can't back with data.</p>
+    <div class="hero-ctas rv rv-d3">
+      <a class="btn btn-primary" href="ventures.html">Explore our ventures
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="contact.html">Start a project</a>
+    </div>
+    <div class="hero-proof rv rv-d4">
+      <span>3 shipping ventures</span>
+      <span>Built on live operations</span>
+      <span>Human-approved by design</span>
+      <span>Multilingual · multi-market</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENTURES SHOWCASE ================= -->
+<section id="ventures">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker center rv">What we build</div>
+      <h2 class="rv rv-d1">One studio. Three products, each alive on a real business.</h2>
+      <p class="lead center rv rv-d2">Every venture began as a problem we watched happen in the field — not a slide. Here's each one, running.</p>
+    </div>
+
+    <div class="vshow rv rv-d2" data-vshow>
+      <!-- selector list -->
+      <div class="vshow-list">
+        <button class="vrow is-active" style="--vc:var(--seam)" aria-label="Show Seam">
+          <span class="vrow-mark">
+            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.2-5.2M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 10h6"/></svg>
+          </span>
+          <span class="vrow-text">
+            <span class="vrow-title">Seam</span>
+            <span class="vrow-role">AI textile defect detection</span>
+          </span>
+          <span class="vrow-bar"><span class="vrow-bar-fill"></span></span>
+        </button>
+
+        <button class="vrow" style="--vc:var(--qw)" aria-label="Show Quotewright">
+          <span class="vrow-mark">
+            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h11l5 5v11a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 4v5h5M8 13h8M8 17h5"/></svg>
+          </span>
+          <span class="vrow-text">
+            <span class="vrow-title">Quotewright</span>
+            <span class="vrow-role">RFQ emails in, finished quotes out</span>
+          </span>
+          <span class="vrow-bar"><span class="vrow-bar-fill"></span></span>
+        </button>
+
+        <button class="vrow" style="--vc:var(--mis)" aria-label="Show Misafir">
+          <span class="vrow-mark">
+            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 01-11.6 7.1L4 20l1-5A8 8 0 1121 12z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 11h.01M12 11h.01M15 11h.01"/></svg>
+          </span>
+          <span class="vrow-text">
+            <span class="vrow-title">Misafir</span>
+            <span class="vrow-role">An AI maître for hospitality</span>
+          </span>
+          <span class="vrow-bar"><span class="vrow-bar-fill"></span></span>
+        </button>
+      </div>
+
+      <!-- animated stage -->
+      <div class="vshow-stage">
+        <!-- SEAM -->
+        <div class="vstage is-active" style="--vc:var(--seam)">
+          <div class="vstage-head">
+            <span class="vstage-tag"><span class="d"></span>Seam · live detection</span>
+            <a class="vstage-visit" href="ventures.html#seam">Explore
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="mini-fabric">
+            <div class="mini-hud"><span class="d"></span>SCANNING · YOLO VISION</div>
+            <div class="mini-scan"></div>
+            <div class="mini-box" style="left:16%;top:22%;width:16%;height:15%;animation-delay:.1s"><span class="lbl">Hole · 94%</span></div>
+            <div class="mini-box" style="left:56%;top:16%;width:22%;height:9%;animation-delay:.35s"><span class="lbl">Stain · 88%</span></div>
+            <div class="mini-box" style="left:30%;top:62%;width:34%;height:5%;animation-delay:.6s"><span class="lbl">Streak · 91%</span></div>
+          </div>
+          <p class="vstage-desc">Vision AI that inspects fabric image by image — <b>10 defect classes</b>, bounding boxes, confidence scores, and a Claude-powered analyst that explains root causes to your QC team.</p>
+        </div>
+
+        <!-- QUOTEWRIGHT -->
+        <div class="vstage" style="--vc:var(--qw)">
+          <div class="vstage-head">
+            <span class="vstage-tag"><span class="d"></span>Quotewright · drafting a quote</span>
+            <a class="vstage-visit" href="ventures.html#quotewright">Explore
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="mini-quote">
+            <div class="qh"><span>Microfibre cloth · 40×40 cm</span><span class="sku">SKU 2102271</span></div>
+            <div class="qln"><span>Match</span><b>40×40 · 295 gsm</b></div>
+            <div class="qln"><span>Packaging</span><b>5 pcs/pack · 40/box</b></div>
+            <div class="qln"><span>Quantity</span><b>300 boxes · EXW</b></div>
+            <div class="qln"><span>FX (central bank)</span><b>USD/TRY 46.72</b></div>
+            <div class="qprice">
+              <div class="qbox cash"><div class="pl">Peşin · cash</div><div class="pv">$29,880</div></div>
+              <div class="qbox term"><div class="pl">Vadeli · 90 days</div><div class="pv">$33,017</div></div>
+            </div>
+            <div class="qapprove"><span class="qchip">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"/></svg>
+              Approve &amp; send</span> · one tap on your phone</div>
+          </div>
+          <p class="vstage-desc">Reads every RFQ email, matches it to <b>your own price catalog</b>, and drafts a complete quote — cash and term prices, box math done, in the customer's language. Nothing sends without you.</p>
+        </div>
+
+        <!-- MISAFIR -->
+        <div class="vstage" style="--vc:var(--mis)">
+          <div class="vstage-head">
+            <span class="vstage-tag"><span class="d"></span>Misafir · drafting a reply</span>
+            <a class="vstage-visit" href="ventures.html#misafir">Explore
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="mini-chat">
+            <div class="mchip">"Harika bir konaklamaydı, teşekkürler! Ama klima biraz gürültülüydü."</div>
+            <div class="mmeta">
+              <span class="mtag">TR · Turkish</span>
+              <span class="mtag">Review · 5★</span>
+              <span class="mtag">Sentiment · positive</span>
+            </div>
+            <div class="mreply">Çok teşekkür ederiz! Klima konusundaki geri bildiriminizi teknik ekibimize ilettik — sizi tekrar ağırlamak isteriz.</div>
+            <div class="mgate"><span class="g">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 7"/></svg>
+              Approve &amp; send</span> · human gate before anything posts</div>
+          </div>
+          <p class="vstage-desc">Watches reviews and guest messages across channels, detects <b>language, intent and sentiment</b>, then drafts a reply in the guest's own language — and waits behind a human approval gate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Textile quality control</span><span>Manufacturing quotes</span><span>Hospitality guest care</span><span>Vision AI</span><span>Human-in-the-loop</span><span>Built on real operations</span><span>Multilingual by default</span>
+    <span>Textile quality control</span><span>Manufacturing quotes</span><span>Hospitality guest care</span><span>Vision AI</span><span>Human-in-the-loop</span><span>Built on real operations</span><span>Multilingual by default</span>
+  </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker center rv">The studio in numbers</div>
+      <h2 class="rv rv-d1">Small studio, real surface area.</h2>
+    </div>
+    <div class="stats" style="margin-top:56px">
+      <div class="stat rv">
+        <div class="stat-num"><span data-count="3">0</span></div>
+        <div class="stat-label">Products shipping — Seam, Quotewright &amp; Misafir</div>
+      </div>
+      <div class="stat rv rv-d1">
+        <div class="stat-num"><span data-count="10">0</span></div>
+        <div class="stat-label">Textile defect classes Seam's model detects</div>
+      </div>
+      <div class="stat rv rv-d2">
+        <div class="stat-num"><span data-count="4">0</span>+</div>
+        <div class="stat-label">Languages our products read &amp; reply in</div>
+      </div>
+      <div class="stat rv rv-d3">
+        <div class="stat-num"><span data-count="100">0</span><span>%</span></div>
+        <div class="stat-label">Actions gated by a human before they go out</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section id="approach">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker center rv">How we work</div>
+      <h2 class="rv rv-d1">A studio playbook, not a science project.</h2>
+      <p class="lead center rv rv-d2">The same convictions run through every product we build. They're the reason our tools survive contact with a real business.</p>
+    </div>
+    <div class="grid-3">
+      <div class="acard rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
+        <h3>Forged on real operations</h3>
+        <p>Nothing is trained on tidy demos. Seam learned on a real mill's fabric; Quotewright grew inside a working textile factory's inbox; Misafir was shaped around how hotels actually answer guests. The hard parts are already survived.</p>
+        <div class="tags"><span>Field-first</span><span>Real data</span></div>
+      </div>
+      <div class="acard rv rv-d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V6l7-3z"/></svg></div>
+        <h3>A human always holds the pen</h3>
+        <p>AI drafts; people decide. Every quote, every reply, every correction passes a human gate before it reaches a customer. It's not a limitation — it's how trust is built into the workflow.</p>
+        <div class="tags"><span>Approve &amp; send</span><span>No auto-send</span></div>
+      </div>
+      <div class="acard rv rv-d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div>
+        <h3>Never invent what we can't back</h3>
+        <p>Prices come only from your catalog. Detections come with evidence and confidence. Replies never fabricate a fact. If the system doesn't know, it says what it needs — it doesn't guess.</p>
+        <div class="tags"><span>Auditable</span><span>Evidence-led</span></div>
+      </div>
+      <div class="acard rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+        <h3>It gets sharper with use</h3>
+        <p>Every QC review, every approved edit, every correction feeds back in. Our products are designed to improve as your team works — a compounding loop, not a static model that decays.</p>
+        <div class="tags"><span>Feedback loops</span><span>Continuous</span></div>
+      </div>
+      <div class="acard rv rv-d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 12h18M3 19h18"/><circle cx="8" cy="5" r="2" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="7" cy="19" r="2" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Multilingual, multi-market</h3>
+        <p>Turkish, English, German, Italian — our tools meet customers in their own language because the businesses we build for already do. Localisation isn't a feature bolted on; it's a starting assumption.</p>
+        <div class="tags"><span>TR / EN / DE / IT</span><span>Global-ready</span></div>
+      </div>
+      <div class="acard rv rv-d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>Ship small, ship real</h3>
+        <p>We start with a pilot on a mailbox, a line, a venue you choose — days to set up, easy to pull. Value shows up before a big commitment does. Then we widen from what's already working.</p>
+        <div class="tags"><span>Pilot-first</span><span>Low risk</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker center rv">From floor to feature</div>
+      <h2 class="rv rv-d1">How an idea becomes a product here.</h2>
+    </div>
+    <div class="pipeline">
+      <div class="pipe-thread"></div>
+      <div class="pstep rv">
+        <div class="node"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M12 8v8"/></svg></div>
+        <span class="pn">01</span>
+        <h3>Listen on site</h3>
+        <p>We sit with the mill, the factory inbox, the front desk. The problem defines itself before a line of code is written.</p>
+      </div>
+      <div class="pstep rv rv-d1">
+        <div class="node"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16"/></svg></div>
+        <span class="pn">02</span>
+        <h3>Prototype fast</h3>
+        <p>A rough, honest working version — on real data, not staged samples. If it doesn't hold up in the field, we learn that early.</p>
+      </div>
+      <div class="pstep rv rv-d2">
+        <div class="node"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 21v-6h6v6"/></svg></div>
+        <span class="pn">03</span>
+        <h3>Deploy on a real floor</h3>
+        <p>A live pilot on a mailbox, line, or venue you pick. Human-gated from day one, so nothing risky goes out.</p>
+      </div>
+      <div class="pstep rv rv-d3">
+        <div class="node"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v6h6M20 20v-6h-6"/><path stroke-linecap="round" stroke-linejoin="round" d="M20 10a8 8 0 00-14-4M4 14a8 8 0 0014 4"/></svg></div>
+        <span class="pn">04</span>
+        <h3>Iterate with the loop</h3>
+        <p>Every correction and approval feeds back. Accuracy climbs, scope widens, and the product settles into the daily routine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BIG QUOTE ================= -->
+<section>
+  <div class="wrap">
+    <p class="bigquote rv">"The best AI tools don't announce themselves. They quietly do the tedious part — <span class="grad-text">the pricing math, the visual scan, the late-night reply</span> — and hand the judgement back to the person who owns the outcome."</p>
+    <p class="quote-by center rv rv-d1">— The Seam Studio operating principle</p>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="wrap">
+    <div class="kicker center rv" style="justify-content:center">Let's build</div>
+    <h2 class="rv rv-d1">Have a floor that deserves better tools?</h2>
+    <p class="lead center rv rv-d2">Whether it's textile QC, quoting, guest care — or a problem we haven't met yet — tell us what happens on your floor. Pilots are small, quick to set up, and easy to walk away from.</p>
+    <div class="hero-ctas rv rv-d3">
+      <a class="btn btn-primary" href="contact.html">Start a project
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="ventures.html">See the ventures</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="Seam Studio home">
+          <img class="brand-mark" src="favicon.svg" alt="" width="32" height="32">
+          <span><b>Seam</b> <span class="st">Studio</span></span>
+        </a>
+        <p>An independent AI product studio building tools that work where the work happens — on the factory floor, in the inbox, at the front desk.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h6>Ventures</h6>
+          <ul>
+            <li><a href="ventures.html#seam">Seam</a></li>
+            <li><a href="ventures.html#quotewright">Quotewright</a></li>
+            <li><a href="ventures.html#misafir">Misafir</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h6>Studio</h6>
+          <ul>
+            <li><a href="studio.html">About</a></li>
+            <li><a href="index.html#approach">Approach</a></li>
+            <li><a href="studio.html#story">Story</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h6>Get in touch</h6>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Start a project</a></li>
+            <li><a href="contact.html">Book a pilot</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="year">2026</span> Seam Studio. All rights reserved.</span>
+      <span class="dots"><i></i><i></i><i></i>&nbsp; Woven in İstanbul &amp; London</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
