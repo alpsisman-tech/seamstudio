@@ -3,216 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Studio — Seam Studio</title>
-<meta name="description" content="Seam Studio is an independent AI product studio born on a real factory floor in İstanbul. Our story, our operating principles, and how we turn on-site problems into AI products that ship.">
-<meta name="theme-color" content="#F4F1E9">
+<title>Studio — Seam Studio</title>
+<meta name="description" content="Seam Studio is an AI product studio born on a real factory floor in İstanbul. Our story, the principles we hold to, and how we turn on-site problems into products.">
+<meta name="theme-color" content="#ECE8DF">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
-
-<div class="selvedge" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="ambient" aria-hidden="true"><span class="a1"></span><span class="a2"></span></div>
 
 <nav id="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html" aria-label="Seam Studio home">
-      <img class="brand-mark" src="favicon.svg" alt="" width="32" height="32">
-      <span><b>Seam</b> <span class="st">Studio</span></span>
+      <img class="brand-mark" src="favicon.svg" alt="" width="26" height="26">
+      <span class="brand-word">Seam Studio</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="ventures.html">Ventures</a></li>
+      <li><a href="index.html">Index</a></li>
+      <li><a href="ventures.html">Work</a></li>
       <li><a href="studio.html" class="active">Studio</a></li>
-      <li><a href="index.html#approach">Approach</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-right">
-      <a class="btn btn-thread btn-sm nav-cta" href="contact.html">Start a project</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
   </div>
 </nav>
 
 <div class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="ventures.html">Ventures</a>
+  <a href="index.html">Index</a>
+  <a href="ventures.html">Work</a>
   <a href="studio.html">Studio</a>
-  <a href="index.html#approach">Approach</a>
   <a href="contact.html">Contact</a>
-  <div class="m-cta">
-    <a class="btn btn-thread" href="contact.html">Start a project</a>
-    <a class="btn btn-ghost" href="ventures.html">See the ventures</a>
-  </div>
 </div>
 
 <main>
 
-<!-- ============ PAGE HERO ============ -->
-<section class="page-hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-blob b1"></div>
-    <div class="hero-blob b2"></div>
-    <div class="hero-blob b3"></div>
-    <div class="hero-grid"></div>
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow rv">The Studio</div>
+    <h1 class="display rise" style="max-width:15ch">A studio that starts on the floor, not the slide.</h1>
+    <p class="lead rv rv-d2" style="margin-top:34px">Seam Studio is small on purpose. We build a few products deeply, each rooted in a real business, rather than many shallow ones.</p>
   </div>
-  <div class="wrap" style="position:relative;z-index:2">
-    <span class="badge rv"><span class="dot"></span>The studio behind the ventures</span>
-    <h1 class="rv rv-d1">A studio that starts<br>on the <span class="woven grad-text">floor</span>, not the slide.</h1>
-    <p class="lead center rv rv-d2">Seam Studio is small on purpose. We build a few AI products deeply, each rooted in a real business, rather than many shallow ones. This is what we believe and how we got here.</p>
-  </div>
-</section>
+</header>
 
 <!-- ============ STORY ============ -->
-<section id="story">
+<section class="section" id="story">
   <div class="wrap">
     <div class="split">
       <div>
-        <div class="kicker rv">The story</div>
-        <h2 class="rv rv-d1">It began in a textile factory in İstanbul.</h2>
+        <div class="eyebrow rv">Story</div>
+        <h2 class="rise" style="margin-top:22px">It began in a textile factory in İstanbul.</h2>
       </div>
       <div class="prose rv rv-d2">
         <p>Seam Studio didn't start with a pitch deck. It started on the floor of a working made-to-order textile manufacturer — watching quality inspectors squint at fabric under bad light, and watching the sales desk drown in request-for-quotation emails that all needed the same painstaking pricing math.</p>
         <p>Two problems, one root cause: <b>skilled people spending their day on work a machine could assist with</b>, while the judgement that actually mattered got squeezed. So we built. <b>Seam</b> taught a vision model to see fabric defects. <b>Quotewright</b> learned the factory's own catalog and started drafting quotes. The tools worked because they were forged where the work happens.</p>
-        <p>From there the pattern generalised. <b>Misafir</b> took the same draft-first, human-gated philosophy to hospitality — reading guest messages, drafting replies, keeping the owner in control. Three products, one method. That method is the studio.</p>
+        <p>From there the pattern generalised. <b>Misafir</b> took the same draft-first, human-gated approach to hospitality — reading guest messages, drafting replies, keeping the owner in control. Three products, one method. That method is the studio.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ PRINCIPLES ============ -->
-<section class="band">
+<section class="section band">
   <div class="wrap">
-    <div class="split">
-      <div>
-        <div class="kicker rv">What we believe</div>
-        <h2 class="rv rv-d1">Six principles we don't compromise on.</h2>
-        <p class="lead rv rv-d2" style="margin-top:22px">They sound simple. Holding to all six, in every product, under real deadlines — that's the hard part, and the whole point.</p>
+    <div class="practice-grid">
+      <div class="practice-intro">
+        <div class="eyebrow rv">What we believe</div>
+        <h2 class="rise" style="margin-top:22px">Six principles we don't compromise on.</h2>
+        <p class="lead rv rv-d2" style="margin-top:24px">They sound simple. Holding to all six, in every product, under real deadlines — that's the hard part, and the whole point.</p>
       </div>
-      <div class="rv rv-d2">
-        <div class="principle">
-          <span class="pnum">01</span>
-          <div><h3>Build on real operations</h3><p>If it hasn't survived a real mill, inbox, or front desk, it isn't done. We prototype on live data, not curated demos.</p></div>
-        </div>
-        <div class="principle">
-          <span class="pnum">02</span>
-          <div><h3>Keep a human in the loop</h3><p>AI drafts and flags; people decide and send. Accountability never leaves the person who owns the outcome.</p></div>
-        </div>
-        <div class="principle">
-          <span class="pnum">03</span>
-          <div><h3>Ground every output</h3><p>Prices from your catalog, detections with evidence, replies without invention. Unsure means asking, not guessing.</p></div>
-        </div>
-        <div class="principle">
-          <span class="pnum">04</span>
-          <div><h3>Design for the loop</h3><p>Every correction improves the model. We build products that compound in value the more they're used.</p></div>
-        </div>
-        <div class="principle">
-          <span class="pnum">05</span>
-          <div><h3>Meet people in their language</h3><p>Multilingual is a starting assumption. The businesses we serve trade across borders; so do our tools.</p></div>
-        </div>
-        <div class="principle">
-          <span class="pnum">06</span>
-          <div><h3>Ship small, then widen</h3><p>Pilots first — quick to set up, easy to leave. We earn scope by proving value on a floor you already run.</p></div>
-        </div>
+      <div class="principle-list rv rv-d2">
+        <div class="pl-item"><span class="pl-num">01</span><div><h3>Build on real operations</h3><p>If it hasn't survived a real mill, inbox, or front desk, it isn't done. We prototype on live data, not curated demos.</p></div></div>
+        <div class="pl-item"><span class="pl-num">02</span><div><h3>Keep a human in the loop</h3><p>The software drafts and flags; people decide and send. Accountability never leaves the person who owns the outcome.</p></div></div>
+        <div class="pl-item"><span class="pl-num">03</span><div><h3>Ground every output</h3><p>Prices from your catalog, detections with evidence, replies without invention. Unsure means asking, not guessing.</p></div></div>
+        <div class="pl-item"><span class="pl-num">04</span><div><h3>Design for the loop</h3><p>Every correction improves the model. We build products that compound in value the more they're used.</p></div></div>
+        <div class="pl-item"><span class="pl-num">05</span><div><h3>Meet people in their language</h3><p>Multilingual is a starting assumption. The businesses we serve trade across borders; so do our tools.</p></div></div>
+        <div class="pl-item"><span class="pl-num">06</span><div><h3>Keep the studio small</h3><p>A few products, made well, beats many made thinly. Depth is the whole advantage of working this way.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ TIMELINE ============ -->
-<section>
+<section class="section">
   <div class="wrap">
-    <div class="center">
-      <div class="kicker center rv">The path so far</div>
-      <h2 class="rv rv-d1">From one floor to a studio.</h2>
-    </div>
-    <div class="timeline">
-      <div class="tevent rv">
-        <span class="ty">On the floor</span>
-        <h3>The first problem</h3>
-        <p>Watching inspectors and the sales desk in a real İstanbul textile factory. The recurring theme: skilled judgement buried under repetitive, error-prone work.</p>
+    <div class="split">
+      <div>
+        <div class="eyebrow rv">The path so far</div>
+        <h2 class="rise" style="margin-top:22px">From one floor to a studio.</h2>
       </div>
-      <div class="tevent rv rv-d1">
-        <span class="ty">Venture 01</span>
-        <h3>Seam is born</h3>
-        <p>A vision model trained to detect fabric defects — holes, stains, streaks and more — with bounding boxes, confidence, and a dashboard a QC team would actually use.</p>
-      </div>
-      <div class="tevent rv rv-d2">
-        <span class="ty">Venture 02</span>
-        <h3>Quotewright follows</h3>
-        <p>The same factory's RFQ inbox becomes the training ground for a tool that drafts complete, catalog-grounded quotes — cash and term — awaiting one-tap approval.</p>
-      </div>
-      <div class="tevent rv rv-d3">
-        <span class="ty">Venture 03</span>
-        <h3>Misafir generalises the method</h3>
-        <p>Draft-first, human-gated AI moves into hospitality: reading guest messages, drafting multilingual replies, and briefing owners weekly.</p>
-      </div>
-      <div class="tevent rv rv-d4">
-        <span class="ty">Today</span>
-        <h3>Seam Studio</h3>
-        <p>Three products under one roof and one method — with room for the next problem we meet on a floor that deserves better tools.</p>
+      <div class="timeline rv rv-d2">
+        <div class="tevent">
+          <span class="ty">On the floor</span>
+          <h3>The first problem</h3>
+          <p>Watching inspectors and the sales desk in a real İstanbul textile factory. The recurring theme: skilled judgement buried under repetitive, error-prone work.</p>
+        </div>
+        <div class="tevent">
+          <span class="ty">Work 01</span>
+          <h3>Seam is born</h3>
+          <p>A vision model trained to detect fabric defects — holes, stains, streaks and more — with bounding boxes, confidence, and a dashboard a QC team would actually use.</p>
+        </div>
+        <div class="tevent">
+          <span class="ty">Work 02</span>
+          <h3>Quotewright follows</h3>
+          <p>The same factory's RFQ inbox becomes the training ground for a tool that drafts complete, catalog-grounded quotes — cash and term — awaiting one-tap approval.</p>
+        </div>
+        <div class="tevent">
+          <span class="ty">Work 03</span>
+          <h3>Misafir generalises the method</h3>
+          <p>Draft-first, human-gated AI moves into hospitality: reading guest messages, drafting multilingual replies, and briefing owners weekly.</p>
+        </div>
+        <div class="tevent">
+          <span class="ty">Today</span>
+          <h3>Seam Studio</h3>
+          <p>Three products under one roof and one method — with room for the next problem we meet on a floor that deserves better tools.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="band">
+<section class="section band">
   <div class="wrap">
-    <div class="center">
-      <div class="kicker center rv">Questions</div>
-      <h2 class="rv rv-d1">The things people ask us.</h2>
-    </div>
+    <div class="eyebrow rv">Questions</div>
+    <h2 class="rise" style="margin-top:22px;max-width:14ch">The things people ask us.</h2>
     <div class="faq-list">
       <div class="faq rv">
         <button class="q" type="button">Is Seam Studio one company or several products?
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-        <div class="a"><p>One studio. Seam, Quotewright and Misafir are distinct products with their own identities, but they share a team, a method, and a set of principles. Think of the studio as the workshop and each venture as something we've built in it.</p></div>
+        <div class="a"><p>One studio. Seam, Quotewright and Misafir are distinct products with their own identities, but they share a team, a method, and a set of principles. The studio is the workshop; each product is something we've built in it.</p></div>
       </div>
       <div class="faq rv">
         <button class="q" type="button">Do you only work in textiles and hospitality?
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-        <div class="a"><p>Those are where we started, because that's where we saw the problems first-hand. But the method — AI that drafts, humans that decide, grounded in your real data — travels well. If you run an operation buried under repetitive, judgement-adjacent work, we'd like to hear about it.</p></div>
+        <div class="a"><p>Those are where we started, because that's where we saw the problems first-hand. But the method — AI that drafts, humans that decide, grounded in your real data — travels well. If you run an operation buried under repetitive, judgement-adjacent work, we're interested.</p></div>
       </div>
       <div class="faq rv">
         <button class="q" type="button">Will an AI send things to my customers automatically?
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-        <div class="a"><p>No. Every product we build is draft-first and human-gated by design. The AI does the heavy, repetitive part and hands you a draft; a person approves before anything reaches a customer. That's a principle, not a setting you can accidentally turn off.</p></div>
-      </div>
-      <div class="faq rv">
-        <button class="q" type="button">How does a pilot work?
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-        </button>
-        <div class="a"><p>We start on something small you choose — a single production line, one mailbox, or one venue. Setup takes days, not months, and it's easy to walk away from. You see real value on your own data before any larger commitment, and we widen from what's already working.</p></div>
+        <div class="a"><p>No. Every product we build is draft-first and human-gated by design. The AI does the heavy, repetitive part and hands you a draft; a person approves before anything reaches a customer. That's a principle, not a toggle.</p></div>
       </div>
       <div class="faq rv">
         <button class="q" type="button">Where are you based?
-          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-        <div class="a"><p>Woven between İstanbul and London. Our products are multilingual and multi-market from the start — Turkish, English, German and Italian today — because the businesses we build for already work across borders.</p></div>
+        <div class="a"><p>Between İstanbul and London. Our products are multilingual and multi-market from the start — Turkish, English, German and Italian today — because the businesses we build for already work across borders.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
-<section class="cta">
+<!-- ============ CLOSE ============ -->
+<section class="section close">
   <div class="wrap">
-    <div class="kicker center rv" style="justify-content:center">Work with the studio</div>
-    <h2 class="rv rv-d1">Tell us what happens on your floor.</h2>
-    <p class="lead center rv rv-d2">A problem worth solving usually starts as a story about a frustrating Tuesday. We'd like to hear yours.</p>
-    <div class="hero-ctas rv rv-d3">
-      <a class="btn btn-primary" href="contact.html">Start a project
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <div class="close-grid">
+      <h2 class="rise">Curious about the studio or the work?</h2>
+      <a class="alink rv rv-d1" href="contact.html">Get in touch
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="btn btn-ghost" href="ventures.html">See the ventures</a>
     </div>
   </div>
 </section>
@@ -221,17 +177,11 @@
 
 <footer>
   <div class="wrap">
-    <div class="foot-inner">
-      <div class="foot-brand">
-        <a class="brand" href="index.html" aria-label="Seam Studio home">
-          <img class="brand-mark" src="favicon.svg" alt="" width="32" height="32">
-          <span><b>Seam</b> <span class="st">Studio</span></span>
-        </a>
-        <p>An independent AI product studio building tools that work where the work happens — on the factory floor, in the inbox, at the front desk.</p>
-      </div>
+    <div class="foot-top">
+      <div class="foot-word">Seam<br>Studio</div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h6>Ventures</h6>
+          <h6>Work</h6>
           <ul>
             <li><a href="ventures.html#seam">Seam</a></li>
             <li><a href="ventures.html#quotewright">Quotewright</a></li>
@@ -242,27 +192,19 @@
           <h6>Studio</h6>
           <ul>
             <li><a href="studio.html">About</a></li>
-            <li><a href="index.html#approach">Approach</a></li>
             <li><a href="studio.html#story">Story</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h6>Get in touch</h6>
-          <ul>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Start a project</a></li>
-            <li><a href="contact.html">Book a pilot</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© <span id="year">2026</span> Seam Studio. All rights reserved.</span>
-      <span class="dots"><i></i><i></i><i></i>&nbsp; Woven in İstanbul &amp; London</span>
+      <span>© <span id="year">2026</span> Seam Studio</span>
+      <span class="dots"><i></i><i></i><i></i>&nbsp; İstanbul &amp; London</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/main.js?v=2"></script>
+<script src="assets/main.js?v=4"></script>
 </body>
 </html>
