@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=4">
+<link rel="stylesheet" href="assets/style.css?v=5">
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><span class="a1"></span><span class="a2"></span></div>
@@ -21,7 +21,6 @@
 <nav id="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html" aria-label="Seam Studio home">
-      <img class="brand-mark" src="favicon.svg" alt="" width="26" height="26">
       <span class="brand-word">Seam Studio</span>
     </a>
     <ul class="nav-links">
@@ -92,20 +91,59 @@
           <div class="we-index rv">01 — Seam</div>
           <div class="we-name rv rv-d1">Seam</div>
           <div class="we-role rv rv-d1">Textile quality control</div>
-          <p class="we-desc rv rv-d2">Vision AI that inspects fabric image by image — locating <b>holes, stains, streaks, weft &amp; warp defects, needle marks, broken stitches, pinched fabric and knot/slubs</b> with bounding boxes and confidence, and an analyst that explains the causes to your QC team.</p>
-          <a class="alink we-link rv rv-d3" href="ventures.html#seam">Explore Seam
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <p class="we-desc rv rv-d2">Vision AI that inspects fabric image by image, then rolls every result into a live dashboard — <b>pass rates, defect trends, and class breakdowns</b> per line, batch and supplier, with an analyst that explains the causes to your QC team.</p>
+          <div class="we-links rv rv-d3">
+            <a class="alink we-link" href="ventures.html#seam">Explore
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="alink we-visit" href="https://seam.seamuk.com" target="_blank" rel="noopener">Visit Seam
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
         </div>
         <div class="screen rv rv-d2" style="--vc:var(--seam)">
-          <div class="screen-cap"><span class="fig">Fig. 01</span><span>Defect detection</span></div>
-          <div class="mini-fabric">
-            <div class="mini-scan"></div>
-            <div class="mini-box" style="left:15%;top:20%;width:15%;height:15%;animation-delay:.1s"><span class="lbl">Hole · 94%</span></div>
-            <div class="mini-box" style="left:55%;top:15%;width:23%;height:9%;animation-delay:.35s"><span class="lbl">Stain · 88%</span></div>
-            <div class="mini-box" style="left:29%;top:60%;width:35%;height:5%;animation-delay:.6s"><span class="lbl">Streak · 91%</span></div>
+          <div class="screen-chrome">
+            <span class="screen-dots"><i></i><i></i><i></i></span>
+            <span class="screen-title"><b>Seam</b> · quality dashboard</span>
+            <span class="screen-live">Live</span>
           </div>
-          <p class="screen-note">Every detection carries a class, a location, and a confidence score — <b>evidence, not vague alerts</b>.</p>
+          <div class="screen-body">
+            <div class="app-dash">
+              <div class="dash-stats">
+                <div class="dstat"><div class="n"><span data-count="94">0</span><span class="u">%</span></div><div class="l">Pass rate</div></div>
+                <div class="dstat"><div class="n"><span data-count="108">0</span></div><div class="l">Defects · 24h</div></div>
+                <div class="dstat"><div class="n"><span data-count="6">0</span></div><div class="l">Lines live</div></div>
+              </div>
+              <div class="dash-panels">
+                <div class="dpanel">
+                  <div class="ph"><span>Defects · 14 days</span><span class="delta">&#9650; 12%</span></div>
+                  <div class="trend">
+                    <svg viewBox="0 0 240 96" preserveAspectRatio="none">
+                      <defs><linearGradient id="seamgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3F6B4E" stop-opacity="0.24"/><stop offset="1" stop-color="#3F6B4E" stop-opacity="0"/></linearGradient></defs>
+                      <g class="trend-grid"><line x1="0" y1="32" x2="240" y2="32"/><line x1="0" y1="64" x2="240" y2="64"/></g>
+                      <path class="trend-area" d="M4,74 L22,66 L40,70 L58,54 L76,58 L94,44 L112,50 L130,36 L148,42 L166,28 L184,33 L202,20 L220,25 L236,12 L236,92 L4,92 Z" fill="url(#seamgrad)"/>
+                      <path class="trend-line" d="M4,74 L22,66 L40,70 L58,54 L76,58 L94,44 L112,50 L130,36 L148,42 L166,28 L184,33 L202,20 L220,25 L236,12"/>
+                      <circle class="trend-dot" cx="236" cy="12" r="3.6"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dpanel">
+                  <div class="ph"><span>By class</span></div>
+                  <div class="donut">
+                    <svg viewBox="0 0 120 120">
+                      <circle class="donut-track" cx="60" cy="60" r="46"/>
+                      <circle class="donut-seg s1" cx="60" cy="60" r="46" stroke="#3F6B4E" style="--seg:121" transform="rotate(-90 60 60)"/>
+                      <circle class="donut-seg s2" cx="60" cy="60" r="46" stroke="#3C56BE" style="--seg:81" transform="rotate(61 60 60)"/>
+                      <circle class="donut-seg s3" cx="60" cy="60" r="46" stroke="#B67A34" style="--seg:52" transform="rotate(162 60 60)"/>
+                      <circle class="donut-seg s4" cx="60" cy="60" r="46" stroke="#9C4A2E" style="--seg:24" transform="rotate(226 60 60)"/>
+                      <text class="donut-num" x="60" y="58" text-anchor="middle" dominant-baseline="middle">108</text>
+                      <text class="donut-cap" x="60" y="74" text-anchor="middle">DEFECTS</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -115,25 +153,49 @@
           <div class="we-index rv">02 — Quotewright</div>
           <div class="we-name rv rv-d1">Quotewright</div>
           <div class="we-role rv rv-d1">Manufacturing quotes</div>
-          <p class="we-desc rv rv-d2">Reads every request-for-quotation email, matches it to <b>your own price catalog</b>, and drafts a complete quote — cash and term prices, box math done, in the customer's language. You approve with one tap; nothing sends without you.</p>
-          <a class="alink we-link rv rv-d3" href="ventures.html#quotewright">Explore Quotewright
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <p class="we-desc rv rv-d2">Reads every request-for-quotation email, matches it to <b>your own price catalog</b>, and drafts a complete quotation — cash and term prices, box math done, in the customer's language. You approve with one tap; nothing sends without you.</p>
+          <div class="we-links rv rv-d3">
+            <a class="alink we-link" href="ventures.html#quotewright">Explore
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="alink we-visit" href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Visit Quotewright
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
         </div>
         <div class="screen rv rv-d2" style="--vc:var(--qw)">
-          <div class="screen-cap"><span class="fig">Fig. 02</span><span>Drafted quote</span></div>
-          <div class="mini-quote">
-            <div class="qh"><span>Microfibre cloth · 40×40 cm</span><span class="sku">SKU 2102271</span></div>
-            <div class="qln"><span>Match</span><b>40×40 · 295 gsm</b></div>
-            <div class="qln"><span>Packaging</span><b>5 pcs/pack · 40/box</b></div>
-            <div class="qln"><span>Quantity</span><b>300 boxes · EXW</b></div>
-            <div class="qln"><span>FX (central bank)</span><b>USD/TRY 46.72</b></div>
-            <div class="qprice">
-              <div class="qbox cash"><div class="pl">Peşin · cash</div><div class="pv">$29,880</div></div>
-              <div class="qbox term"><div class="pl">Vadeli · 90 days</div><div class="pv">$33,017</div></div>
+          <div class="screen-chrome">
+            <span class="screen-dots"><i></i><i></i><i></i></span>
+            <span class="screen-title"><b>Quotewright</b> · draft quotation</span>
+            <span class="screen-live">Awaiting approval</span>
+          </div>
+          <div class="screen-body">
+            <div class="qdoc">
+              <div class="qdoc-head">
+                <div class="co">Hassan<small>Nonwoven &amp; Microfibre</small></div>
+                <div class="mt"><b>Quotation</b>EXW · USD<br>TCMB 46.7178</div>
+              </div>
+              <div class="qdoc-sub">Final quotation — VAT excluded, TRY equivalents at today's central-bank rate.</div>
+              <div class="qrows">
+                <div class="qrow">
+                  <div class="pd"><div class="ln">Line 01</div><div class="nm">Car Line Microfibre 200 — Polybag</div><div class="sp">3.7473 USD/m² · 500 boxes</div></div>
+                  <div class="rt"><div class="amt">$32,808</div><span class="pill priced">Priced</span></div>
+                </div>
+                <div class="qrow">
+                  <div class="pd"><div class="ln">Line 02</div><div class="nm">Car Line Microfibre 200 — Box</div><div class="sp">5.7484 USD/m² · 500 boxes</div></div>
+                  <div class="rt"><div class="amt">$50,329</div><span class="pill priced">Priced</span></div>
+                </div>
+                <div class="qrow">
+                  <div class="pd"><div class="ln">Line 03</div><div class="nm">Home Cleaning Cloth — Polybag</div><div class="sp">295 gsm · pricing pending</div></div>
+                  <div class="rt"><span class="pill sales">Sales team</span></div>
+                </div>
+              </div>
+              <div class="qgrand">
+                <div><div class="lbl">Cash in advance</div><div class="cash"><span data-count="91801" data-prefix="$">$0</span></div></div>
+                <div class="rt">90-day term<b><span data-count="92711" data-prefix="$">$0</span></b></div>
+              </div>
             </div>
           </div>
-          <p class="screen-note">Prices come only from your catalog — <b>never invented</b>, always auditable.</p>
         </div>
       </article>
 
@@ -144,22 +206,39 @@
           <div class="we-name rv rv-d1">Misafir</div>
           <div class="we-role rv rv-d1">Hospitality guest care</div>
           <p class="we-desc rv rv-d2">Watches reviews and guest messages across channels, reads <b>language, intent and sentiment</b>, then drafts a reply in the guest's own language — and waits behind a human approval gate. A weekly brief keeps the owner in the loop.</p>
-          <a class="alink we-link rv rv-d3" href="ventures.html#misafir">Explore Misafir
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <div class="we-links rv rv-d3">
+            <a class="alink we-link" href="ventures.html#misafir">Explore
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="alink we-visit" href="https://misafir.seamuk.com" target="_blank" rel="noopener">Visit Misafir
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
         </div>
         <div class="screen rv rv-d2" style="--vc:var(--mis)">
-          <div class="screen-cap"><span class="fig">Fig. 03</span><span>Drafted reply</span></div>
-          <div class="mini-chat">
-            <div class="mchip">"Harika bir konaklamaydı, teşekkürler! Ama klima biraz gürültülüydü."</div>
-            <div class="mmeta">
-              <span class="mtag">TR · Turkish</span>
-              <span class="mtag">Review · 5★</span>
-              <span class="mtag">Positive</span>
-            </div>
-            <div class="mreply">Çok teşekkür ederiz! Klima konusundaki geri bildiriminizi teknik ekibimize ilettik — sizi tekrar ağırlamak isteriz.</div>
+          <div class="screen-chrome">
+            <span class="screen-dots"><i></i><i></i><i></i></span>
+            <span class="screen-title"><b>Misafir</b> · guest inbox</span>
+            <span class="screen-live">Draft</span>
           </div>
-          <p class="screen-note">Draft-first — <b>nothing posts</b> without a person approving it.</p>
+          <div class="screen-body">
+            <div class="chatapp">
+              <div class="cbubble cin">“Harika bir konaklamaydı, teşekkürler! Ama klima biraz gürültülüydü.”</div>
+              <div class="cmeta">
+                <span class="cchip">TR · Turkish</span>
+                <span class="cchip">Review · 5★</span>
+                <span class="cchip">Positive</span>
+              </div>
+              <div class="ctype"><i></i><i></i><i></i></div>
+              <div class="cbubble cout">Çok teşekkür ederiz! Klima konusundaki geri bildiriminizi teknik ekibimize ilettik — sizi tekrar ağırlamak isteriz.</div>
+              <div class="cact">
+                <span class="send">Approve &amp; send
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+                <small>Nothing posts without you</small>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -200,11 +279,29 @@
   </div>
 </section>
 
-<!-- ===================== STATEMENT ===================== -->
+<!-- ===================== METHOD / STATEMENT ===================== -->
 <section class="section">
   <div class="wrap">
-    <div class="eyebrow rv" style="margin-bottom:40px">On method</div>
-    <p class="statement-lead rise">The best tools don't announce themselves. They quietly take the repetitive part — the pricing math, the visual scan, the late-night reply — and hand the judgement back to the person who owns it.</p>
+    <div class="method-grid">
+      <div>
+        <div class="eyebrow rv">On method</div>
+        <p class="statement-lead rise" style="margin-top:26px">The best tools don't announce themselves. They quietly take the repetitive part — the pricing math, the visual scan, the late-night reply — and hand the judgement back to the person who owns it.</p>
+      </div>
+      <div class="mthread rv rv-d2" aria-label="Visit our products">
+        <a class="mnode" href="https://seam.seamuk.com" target="_blank" rel="noopener" style="--nc:var(--seam)">
+          <span class="nm">Seam</span><span class="rl">Textile QC</span>
+          <svg class="go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="mnode" href="https://quotewright.seamuk.com" target="_blank" rel="noopener" style="--nc:var(--qw)">
+          <span class="nm">Quotewright</span><span class="rl">Quotes</span>
+          <svg class="go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="mnode" href="https://misafir.seamuk.com" target="_blank" rel="noopener" style="--nc:var(--mis)">
+          <span class="nm">Misafir</span><span class="rl">Hospitality</span>
+          <svg class="go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -212,7 +309,10 @@
 <section class="section close">
   <div class="wrap">
     <div class="close-grid">
-      <h2 class="rise">Working on something that belongs on a real floor?</h2>
+      <div>
+        <h2 class="rise">Working on something that belongs on a real floor?</h2>
+        <p class="lead rv rv-d1" style="margin-top:20px">Textile QC, quoting, guest care — or a problem none of these cover yet. Tell us what happens on your floor.</p>
+      </div>
       <a class="alink rv rv-d1" href="contact.html">Get in touch
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -228,18 +328,18 @@
       <div class="foot-word">Seam<br>Studio</div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h6>Work</h6>
+          <h6>Products</h6>
           <ul>
-            <li><a href="ventures.html#seam">Seam</a></li>
-            <li><a href="ventures.html#quotewright">Quotewright</a></li>
-            <li><a href="ventures.html#misafir">Misafir</a></li>
+            <li><a href="https://seam.seamuk.com" target="_blank" rel="noopener">Seam &#8599;</a></li>
+            <li><a href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Quotewright &#8599;</a></li>
+            <li><a href="https://misafir.seamuk.com" target="_blank" rel="noopener">Misafir &#8599;</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h6>Studio</h6>
           <ul>
+            <li><a href="ventures.html">Work</a></li>
             <li><a href="studio.html">About</a></li>
-            <li><a href="studio.html#story">Story</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -252,6 +352,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=4"></script>
+<script src="assets/main.js?v=5"></script>
 </body>
 </html>

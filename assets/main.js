@@ -12,9 +12,61 @@
     initNav();
     initMobileNav();
     initReveals();
+    initCounters();
     initFaq();
     initContactForm();
   });
+
+  /* count-up numbers ([data-count]) — scroll-driven, runs once in view */
+  function initCounters() {
+    var pending = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+    if (!pending.length) return;
+    var render = function (el, v) {
+      var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      var pre = el.getAttribute('data-prefix') || '';
+      var suf = el.getAttribute('data-suffix') || '';
+      el.textContent = pre + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString()) + suf;
+    };
+    if (reduceMotion) {
+      pending.forEach(function (el) { render(el, parseFloat(el.getAttribute('data-count'))); });
+      return;
+    }
+    var run = function (el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var dur = 1400, start = null;
+      var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+      var step = function (ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        render(el, target * ease(p));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    var check = function () {
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      pending = pending.filter(function (el) {
+        if (el.getBoundingClientRect().top < vh * 0.88) { run(el); return false; }
+        return true;
+      });
+      if (!pending.length) teardown();
+    };
+    var ticking = false;
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { check(); ticking = false; });
+    };
+    var teardown = function () {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('load', check);
+    check();
+    setTimeout(check, 300);
+  }
 
   function fillYear() {
     var y = document.getElementById('year');
