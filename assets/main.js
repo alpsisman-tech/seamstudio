@@ -311,7 +311,8 @@
     var ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    var colors = ['#9BE45E', '#5B8CFF', '#F6A54A'];
+    // muted ink threads on paper — like fine woven linen, no neon
+    var colors = ['#3C55C0', '#212845', '#9E8B6E'];
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var w = 0, h = 0;
     var threads = [];
@@ -339,8 +340,8 @@
           speed: 0.14 + Math.random() * 0.22,
           phase: Math.random() * Math.PI * 2,
           color: colors[i % colors.length],
-          width: 1 + Math.random() * 1.4,
-          alpha: 0.16 + Math.random() * 0.22
+          width: 1 + Math.random() * 1.2,
+          alpha: 0.05 + Math.random() * 0.09
         });
       }
     };
@@ -348,7 +349,7 @@
     var time = 0;
     var draw = function () {
       ctx.clearRect(0, 0, w, h);
-      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalCompositeOperation = 'source-over';
       for (var i = 0; i < threads.length; i++) {
         var t = threads[i];
         ctx.beginPath();
