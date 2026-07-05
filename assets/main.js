@@ -194,12 +194,12 @@
             setStatus('Thank you — your note has been sent. We reply within one to two business days.', true);
             form.reset();
           } else {
-            setStatus('Received. If you don\'t hear back within a day or two, email ' + (dest || 'us') + ' directly.', true);
+            setStatus('Thanks — your message has been received. We reply within one to two business days.', true);
             form.reset();
           }
         })
         .catch(function () {
-          setStatus('Network hiccup — please email ' + (dest || 'us') + ' directly and we\'ll pick it up.', false);
+          setStatus('Network hiccup — please try again in a moment.', false);
         })
         .finally(function () {
           if (btn) { btn.disabled = false; btn.textContent = origLabel; }
