@@ -2,10 +2,25 @@
 [build]
   publish = "."
 
-# Netlify serves 404.html automatically for unmatched paths.
+# ── Security headers (applied to every response) ─────────────────────────────
+# This is a static brochure site: no login, no database, no API, no secrets in
+# the client. So the applicable hardening is transport + browser-side headers.
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
+    # HSTS — force HTTPS for 2 years, include subdomains, allow preload
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Content Security Policy — allow only what this site actually loads:
+    #   self scripts (app.js), inline style attributes + Google Fonts CSS,
+    #   Google Fonts files, self + data: images, same-origin form posts.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
+    # Clickjacking (belt-and-braces with frame-ancestors above)
+    X-Frame-Options = "DENY"
+    # MIME-sniffing
     X-Content-Type-Options = "nosniff"
+    # Referrer leakage
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Lock down powerful browser features this site never uses
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
