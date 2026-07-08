@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — seam®</title>
+<meta name="description" content="The four Seam ventures — Seam Studio, Seam Vision, Quotewright, Misafir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23131313'/><path d='M20 50h60' stroke='%23D2FF37' stroke-width='7' stroke-dasharray='11 9'/></svg>">
+<style>
+  .projdetail{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--hair)}
+  .projdetail:first-of-type{border-top:0}
+  @media(max-width:860px){ .projdetail{grid-template-columns:1fr} }
+  .projdetail .img{position:relative;aspect-ratio:16/10.6;border-radius:var(--r-md);overflow:hidden;background:#111}
+  .projdetail h2{font-size:clamp(28px,3.6vw,46px);letter-spacing:-.04em}
+  .projdetail .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .projdetail .facts .tag{font-size:12.5px;color:var(--soft);border:1px solid var(--hair);border-radius:100px;padding:6px 13px;font-weight:500}
+  .projdetail p.desc{color:var(--soft);font-size:15.5px;line-height:1.65;margin-top:18px;max-width:52ch}
+  .projdetail .links{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .projstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .projstats .s{font-size:12px;font-weight:600;background:var(--row);border-radius:100px;padding:6px 12px;font-variant-numeric:tabular-nums}
+  .projstats .s em{font-style:normal;color:var(--grey);font-weight:500;margin-left:5px}
+  .featgroup{margin-top:24px}
+  .featgroup .fl{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);font-family:ui-monospace,Menlo,monospace}
+  .featlist{list-style:none;margin:11px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+  .featlist li{display:flex;gap:11px;font-size:14.5px;color:var(--soft);line-height:1.5}
+  .featlist li::before{content:"\2192";color:var(--ink);flex:0 0 auto;font-weight:600}
+  .featlist li b{color:var(--ink);font-weight:600}
+  .projnote{font-size:13.5px;color:var(--grey);margin-top:24px;line-height:1.6;max-width:54ch}
+  .projnote b{color:var(--soft)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap navrow">
+    <a class="logo" href="index.html">seam<span style="font-size:.62em;vertical-align:.5em">®</span></a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="studio.html">Studio</a>
+      <a href="projects.html" aria-current="page">Projects <sup>4</sup></a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobilemenu" id="mobilemenu">
+  <a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+</div>
+
+<div id="page">
+<main>
+
+  <div class="wrap pagehero">
+    <div class="titlerow" style="margin-bottom:0">
+      <span class="aside-l rv">(4)</span>
+      <div class="t rv"><h1 class="mega">Projects.</h1><span class="copy">©2026</span></div>
+      <p class="aside-r rv">Four ventures under one umbrella. Each is real — in production or in pilot — and each links to the next.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:clamp(20px,3vw,40px)">
+    <div class="wrap">
+
+      <div class="projdetail" id="seam-studio">
+        <div class="img rv">
+          <div class="anim">
+            <div class="as-stage">
+              <svg class="as-svg" viewBox="0 0 320 190" fill="none" aria-hidden="true">
+                <g class="as-panelL">
+                  <rect x="26" y="30" width="126" height="130" rx="12" fill="#161616" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                  <rect class="as-wf" x="42" y="50" width="66" height="10" rx="5" fill="rgba(255,255,255,.5)"/>
+                  <rect class="as-wf w2" x="42" y="70" width="94" height="5" rx="2.5" fill="rgba(255,255,255,.18)"/>
+                  <rect class="as-wf w3" x="42" y="82" width="80" height="5" rx="2.5" fill="rgba(255,255,255,.18)"/>
+                  <rect class="as-wf w4" x="42" y="94" width="88" height="5" rx="2.5" fill="rgba(255,255,255,.18)"/>
+                  <rect class="as-wf w2" x="42" y="116" width="94" height="28" rx="6" fill="rgba(255,255,255,.08)"/>
+                </g>
+                <g class="as-panelR">
+                  <rect x="168" y="30" width="126" height="130" rx="12" fill="#161616" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                  <rect class="as-wf" x="184" y="50" width="94" height="52" rx="8" fill="rgba(255,255,255,.1)"/>
+                  <path class="as-wf w2" d="M196 90l14-16 12 10 16-20" stroke="rgba(255,255,255,.4)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <g class="as-cta">
+                    <rect class="as-wf w3" x="184" y="114" width="58" height="26" rx="13" fill="#D2FF37"/>
+                    <circle class="as-wf w3" cx="230" cy="127" r="2.5" fill="#111"/>
+                  </g>
+                </g>
+                <line class="as-seamglow" x1="160" y1="20" x2="160" y2="170" stroke="rgba(210,255,55,.5)" stroke-width="6" stroke-linecap="round"/>
+                <path class="as-seam" d="M160 20v150" stroke="#D2FF37" stroke-width="2"/>
+                <g class="as-needle"><circle cx="160" cy="95" r="4" fill="#D2FF37"/><circle cx="160" cy="95" r="8" fill="none" stroke="rgba(210,255,55,.35)" stroke-width="1.5"/></g>
+                <path class="as-cursor" d="M206 130l7 17 3-7 7-3-17-7Z" fill="#fff" stroke="#111" stroke-width="1" transform="translate(6,-4)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="vchip rv">Seam Studio® /2026</span>
+          <h2 class="rv" style="margin-top:14px">Design &amp; web — <span class="g">the studio itself.</span></h2>
+          <p class="desc rv">Seam Studio is the design and engineering practice behind the other three ventures — and the same work is open to clients. Websites, brands, and the automation that runs underneath them, in Turkish and English, from first sketch to production.</p>
+          <p class="desc rv">One accountable pair of hands designs the interface and wires the system behind it, so the site and its machinery ship as one piece — not a front end handed off to someone else to plug in.</p>
+          <div class="projstats rv">
+            <span class="s">4 <em>ventures shipped</em></span><span class="s">TR / EN <em>bilingual</em></span><span class="s">London / İstanbul</span>
+          </div>
+          <div class="featgroup rv"><span class="fl">Design &amp; web</span>
+            <ul class="featlist">
+              <li>Marketing sites, portfolios and stores, designed and built end to end</li>
+              <li>Art direction, UX/UI, and a brand system that stays consistent everywhere</li>
+              <li>Built in <b>Framer</b> or <b>Next.js</b>, with a CMS the client can actually run</li>
+              <li>Bilingual <b>Turkish / English</b> copy and layout by default</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Systems &amp; automation</span>
+            <ul class="featlist">
+              <li>The workflows behind the site — reservations, inboxes, quoting, reporting</li>
+              <li><b>n8n</b> orchestration with LLM agents and third-party integrations</li>
+              <li>Email and WhatsApp automation, always behind a human approval gate</li>
+            </ul>
+          </div>
+          <div class="facts rv">
+            <span class="tag">Art direction</span><span class="tag">UX / UI</span><span class="tag">Framer / Next.js</span><span class="tag">n8n</span><span class="tag">Branding</span><span class="tag">Bilingual TR / EN</span>
+          </div>
+          <div class="links rv"><a class="pill" href="contact.html">Start a project</a><a class="pill ghost" href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+        </div>
+      </div>
+
+      <div class="projdetail" id="seam-vision">
+        <div class="img rv">
+          <div class="anim">
+            <div class="av-frame">
+              <div class="av-head">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span class="t">Seam Vision — Line 2</span>
+                <span class="live"><i></i>LIVE</span>
+              </div>
+              <div class="av-fabric"></div>
+              <div class="av-scan"></div>
+              <div class="av-box av-b1"><span class="frame"></span><b>SLUB</b><span class="conf">98.4%</span></div>
+              <div class="av-box av-b2"><span class="frame"></span><b>STAIN</b><span class="conf">96.1%</span></div>
+              <div class="av-side">
+                <div class="av-tile"><div class="k">Inspected today</div><div class="v">2,140 m²<em>▲</em></div></div>
+                <div class="av-flag"><i></i>Slub — row 214, cam 3</div>
+                <div class="av-flag f2"><i></i>Stain — row 231, cam 1</div>
+                <div class="av-tile"><div class="k">Line rate</div><div class="av-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="vchip rv">Seam Vision® /2025</span>
+          <h2 class="rv" style="margin-top:14px">AI defect detection <span class="g">for textile production lines.</span></h2>
+          <p class="desc rv">Computer vision that inspects fabric and flags defects as the line runs. A YOLOv8-class model returns a bounding box, defect class and confidence score in under two seconds — and a built-in AI analyst turns those detections into root-cause insight for the QC team. Built on Next.js and Supabase, with a live demo you can try on your own fabric.</p>
+          <div class="projstats rv">
+            <span class="s">92.8% <em>accuracy</em></span><span class="s">&lt;2s <em>/ image</em></span><span class="s">9 <em>defect classes</em></span><span class="s">∞ <em>production lines</em></span>
+          </div>
+          <div class="featgroup rv"><span class="fl">Detects</span>
+            <ul class="featlist">
+              <li>Holes, stains and streaks; weft and warp defects</li>
+              <li>Needle marks, broken stitches, pinched fabric, knots &amp; slubs</li>
+              <li>Tear/cut in training — new custom classes added without code changes</li>
+              <li>Every hit returns a bounding box, class and confidence score</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Dashboard &amp; AI analyst</span>
+            <ul class="featlist">
+              <li>Single-image or <b>batch</b> processing of hundreds of photos at once</li>
+              <li>14-day quality trends, defect distribution and live pass-rate</li>
+              <li>A per-line <b>AI analyst</b> that reads the full dataset and recommends fixes</li>
+              <li>Searchable, timestamped archive of original and annotated images</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Lines, audit &amp; learning</span>
+            <ul class="featlist">
+              <li>Unlimited production lines with comparative benchmarking</li>
+              <li>Audit-ready evidence, PDF / Excel export and supplier scorecards</li>
+              <li>One-click confirm or draw-to-correct — corrections become training data and queue the model for retraining</li>
+            </ul>
+          </div>
+          <p class="projnote rv">In use on real production lines at <b>KoruSer</b> and <b>Hassan Textile</b>. Starter, Pro and Enterprise tiers, currently in early access.</p>
+          <div class="facts rv">
+            <span class="tag">YOLOv8</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">AI analyst</span><span class="tag">Live demo</span>
+          </div>
+          <div class="links rv"><a class="pill" href="https://seam.seamuk.com" target="_blank" rel="noopener">Visit site</a><a class="pill ghost" href="contact.html">Ask about it</a></div>
+        </div>
+      </div>
+
+      <div class="projdetail" id="quotewright">
+        <div class="img rv">
+          <div class="anim">
+            <div class="aq-mail">
+              <div class="subj"><i></i>Re: RFQ — nonwoven rolls</div>
+              <div class="from">customer@buyer.de → sales</div>
+              <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+              <span class="aq-att"><b>⌗</b> RFQ_lines.xlsx</span>
+            </div>
+            <div class="aq-flow"><span class="track"></span><span class="dot"></span></div>
+            <div class="aq-quote">
+              <div class="lh"><span class="wm">QUOTATION</span><span class="no">№ 2026-041</span></div>
+              <div class="aq-langs"><i class="on">DE</i><i>EN</i><i>TR</i></div>
+              <div class="aq-row"><span class="l"><span class="p">Nonwoven roll · 220 gsm</span><span class="s">OK0220SD1659H915</span></span><b>€0.72/m²</b></div>
+              <div class="aq-row"><span class="l"><span class="p">Microfibre cloth · 32×38</span><span class="s">3 pcs / pack · 48 / box</span></span><b>$1.37/pk</b></div>
+              <div class="aq-row"><span class="l"><span class="p">Uncatalogued item</span><span class="s">no price invented</span></span><b class="pend">→ sales team</b></div>
+              <div class="aq-total"><span>Grand total</span><span class="sum"><i></i>€72,000.00</span></div>
+            </div>
+            <div class="aq-stamp">Draft — human approves</div>
+          </div>
+        </div>
+        <div>
+          <span class="vchip rv">Quotewright® /2026</span>
+          <h2 class="rv" style="margin-top:14px">RFQ email in, <span class="g">finished quote out.</span></h2>
+          <p class="desc rv">For made-to-order manufacturers buried in quotation requests. Quotewright reads an incoming RFQ — the whole thread, not just the last message — pulls out every line, matches it to your own catalogue, and drafts a complete branded quotation in about two minutes, in the customer’s language. Then it stops: nothing sends without you.</p>
+          <div class="projstats rv">
+            <span class="s">~2 min <em>/ draft</em></span><span class="s">5 <em>languages</em></span><span class="s">600+ <em>catalogue items</em></span><span class="s">0 <em>invented prices</em></span>
+          </div>
+          <div class="featgroup rv"><span class="fl">Reads the request</span>
+            <ul class="featlist">
+              <li>Classifies incoming RFQ emails and analyses the full thread</li>
+              <li>Extracts size, colour, packaging and quantity, line by line</li>
+              <li>Handles requests in multiple languages — TR, EN, DE, BG, FR</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Builds the quote</span>
+            <ul class="featlist">
+              <li>Matches every line to <b>your own catalogue</b>, box math included</li>
+              <li>Cash and term pricing on each line, written in the customer’s language</li>
+              <li>Multi-currency with <b>daily central-bank FX</b>; EXW, FOB, CIF incoterms</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Never guesses — you approve</span>
+            <ul class="featlist">
+              <li>Prices come only from your catalogue — <b>it will not invent a number</b></li>
+              <li>Incomplete lines are flagged with exactly what’s missing; uncatalogued items route to sales</li>
+              <li>One-tap approval from your phone — nothing sends without you</li>
+            </ul>
+          </div>
+          <p class="projnote rv">Built on real factory data — <b>messy cost workbooks, multi-message threads, half-specified requests</b> — and validated against a manufacturer’s historical quotes to the cent.</p>
+          <div class="facts rv">
+            <span class="tag">TR EN DE BG FR</span><span class="tag">Catalogue-only</span><span class="tag">Multi-currency</span><span class="tag">Draft-first</span>
+          </div>
+          <div class="links rv"><a class="pill" href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Visit site</a><a class="pill ghost" href="contact.html">Ask about a pilot</a></div>
+        </div>
+      </div>
+
+      <div class="projdetail" id="misafir">
+        <div class="img rv">
+          <div class="anim">
+            <div class="am-toast"><div class="tt"><i></i>Reservation confirmed</div><div class="ts">Sat 21:00 · table for 4 · seaside</div></div>
+            <div class="am-frame">
+              <div class="am-head"><span class="logo">M</span><span class="t">Misafir — guest desk</span><span class="on"><i></i>online</span></div>
+              <div class="am-chat">
+                <div class="am-b am-guest">
+                  <div class="who">Guest review · Google</div>
+                  Lovely evening by the water — though service was slow to start.
+                  <div class="am-stars"><i>★</i><i>★</i><i>★</i><i>★</i>★</div>
+                </div>
+                <div class="am-typing"><i></i><i></i><i></i></div>
+                <div class="am-b am-draft">
+                  <span class="lang">EN</span>
+                  <div class="who">Misafir — drafted reply</div>
+                  Thank you for the kind words — and you’re right about the wait. We’ve shared it with the team for Saturday service…
+                </div>
+                <div class="am-approve"><span class="hold">held for approval</span><span class="tick">✓ Approve &amp; send</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="vchip rv">Misafir® /2026</span>
+          <h2 class="rv" style="margin-top:14px">An AI maître <span class="g">for restaurants &amp; hotels.</span></h2>
+          <p class="desc rv">Misafir — Turkish for “guest” — watches every channel a venue is reachable on, drafts a reply in the guest’s own language, and runs the day-to-day admin around it. It handles the noise; the owner keeps the judgement. Nothing sends until you approve it.</p>
+          <div class="projstats rv">
+            <span class="s">7 <em>channels</em></span><span class="s">6+ <em>languages</em></span><span class="s">~48h <em>setup</em></span><span class="s">human <em>approval</em></span>
+          </div>
+          <div class="featgroup rv"><span class="fl">Watches every channel</span>
+            <ul class="featlist">
+              <li>Google Reviews, Booking.com, Tripadvisor and Google Business profiles</li>
+              <li>WhatsApp Business, Instagram and email — triaged across every venue</li>
+              <li>Drafts in the guest’s language: <b>TR, EN, DE, IT, FR, EL</b>, matched to your venue’s tone</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Runs the guest lifecycle</span>
+            <ul class="featlist">
+              <li>Reservation confirmations and day-before reminders</li>
+              <li>No-show follow-ups, waitlist, and dietary / allergy questions</li>
+              <li>Post-visit thank-you with a review request; concierge asks — late checkout, taxi, recommendations</li>
+              <li>Event and private-dining enquiries flagged for you</li>
+            </ul>
+          </div>
+          <div class="featgroup rv"><span class="fl">Social &amp; owner intelligence</span>
+            <ul class="featlist">
+              <li>Instagram captions and content calendars</li>
+              <li>Weekly owner briefings comparing performance across venues</li>
+              <li>Competitor monitoring and daily staff briefings</li>
+            </ul>
+          </div>
+          <p class="projnote rv">After-hours coverage so no enquiry sits cold overnight. Learns from your edits, <b>GDPR &amp; KVKK aware</b>, and offered in three tiers — Front Desk, Front of House and Maison.</p>
+          <div class="facts rv">
+            <span class="tag">Reviews</span><span class="tag">Reservations</span><span class="tag">WhatsApp / IG</span><span class="tag">6+ languages</span><span class="tag">Human gate</span>
+          </div>
+          <div class="links rv"><a class="pill" href="https://misafir.seamuk.com" target="_blank" rel="noopener">Visit site</a><a class="pill ghost" href="contact.html">Ask about a pilot</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contactrow" style="margin-top:0">
+      <div>
+        <div class="phone">London / İstanbul</div>
+        <a class="bigmail" href="mailto:alp.sisman@gmail.com"><span class="ic">+</span>alp.sisman@gmail.com</a>
+      </div>
+      <div class="footcol">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a><a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footcol">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn — Studio <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/alp-sisman-68a604226/" target="_blank" rel="noopener">LinkedIn — Alp <span>↗</span></a>
+        <a href="https://seam.seamuk.com" target="_blank" rel="noopener">Seam Vision <span>↗</span></a>
+        <a href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Quotewright <span>↗</span></a>
+        <a href="https://misafir.seamuk.com" target="_blank" rel="noopener">Misafir <span>↗</span></a>
+        <a href="https://www.homepages.ucl.ac.uk/~zceisis/index.html" target="_blank" rel="noopener">Web CV <span>↗</span></a>
+      </div>
+    </div>
+    <div class="footmark rv">
+      <div class="wm">seam<span class="r">®</span></div>
+      <div class="sub">Studio</div>
+    </div>
+    <div class="footbar">
+      <span>© <span id="yr">2026</span> seam® Studio. All rights reserved.</span>
+      <span class="links"><a href="contact.html">Contact</a><a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="bottomblur" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>

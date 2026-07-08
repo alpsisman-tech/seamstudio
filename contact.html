@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — seam®</title>
+<meta name="description" content="Tell seam® Studio about your project — a website, automation, or both.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23131313'/><path d='M20 50h60' stroke='%23D2FF37' stroke-width='7' stroke-dasharray='11 9'/></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap navrow">
+    <a class="logo" href="index.html">seam<span style="font-size:.62em;vertical-align:.5em">®</span></a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="studio.html">Studio</a>
+      <a href="projects.html">Projects <sup>4</sup></a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobilemenu" id="mobilemenu">
+  <a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+</div>
+
+<div id="page">
+<main>
+
+  <div class="hero wrap" style="max-width:none;padding-left:0;padding-right:0;padding-top:10px">
+    <div class="panel smoke" style="margin:0 var(--inset)">
+      <div class="ctapanel">
+        <form class="formcard rv" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+          <p style="display:none"><label>Don’t fill this out: <input name="bot-field"></label></p>
+          <span class="brandmini">seam®</span>
+          <h3>Have a project<br>in mind?</h3>
+          <label for="f-name">Your name*</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <label for="f-mail">E-mail*</label>
+          <input id="f-mail" name="email" type="email" autocomplete="email" required>
+          <label for="f-type">What is it about?</label>
+          <input id="f-type" name="topic" type="text" placeholder="Website · automation · branding · a pilot">
+          <label for="f-msg">About the project</label>
+          <textarea id="f-msg" name="message" rows="4" placeholder="A few lines — what it is, who it’s for, and where the seams are today."></textarea>
+          <button class="pill" type="submit">Send it over</button>
+        </form>
+        <div class="ctatext">
+          <h1 class="mega rv">Let’s talk.</h1>
+          <p class="sub rv">Tell us about your project — a website, automation, or both. We reply within two working days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="quotecards" style="margin-top:0">
+        <div class="qcard rv">
+          <span class="vchip">E-mail</span>
+          <p class="quote">alp.sisman@gmail.com</p>
+          <p class="sub">The fastest way to reach the studio, in English or Turkish.</p>
+          <div class="foot"><a class="go2" href="mailto:alp.sisman@gmail.com">Write ↗</a><span class="plus">+</span></div>
+        </div>
+        <div class="qcard rv">
+          <span class="vchip">LinkedIn</span>
+          <p class="quote">seam® Studio</p>
+          <p class="sub">Follow the studio, or connect with Alp directly.</p>
+          <div class="foot"><a class="go2" href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">Studio ↗</a><a class="go2" href="https://www.linkedin.com/in/alp-sisman-68a604226/" target="_blank" rel="noopener">Alp ↗</a></div>
+        </div>
+        <div class="qcard rv">
+          <span class="vchip">Where</span>
+          <p class="quote">London / İstanbul</p>
+          <p class="sub">UK and Türkiye time zones — calls in either, sites in both languages.</p>
+          <div class="foot"><span class="plus">+</span></div>
+        </div>
+        <div class="qcard rv">
+          <span class="vchip">Elsewhere</span>
+          <p class="quote">Seam Vision, live</p>
+          <p class="sub">The defect-detection platform has a public demo at seam.seamuk.com.</p>
+          <div class="foot"><a class="go2" href="https://seam.seamuk.com" target="_blank" rel="noopener">seam.seamuk.com ↗</a><span class="plus">+</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contactrow" style="margin-top:0">
+      <div>
+        <div class="phone">London / İstanbul</div>
+        <a class="bigmail" href="mailto:alp.sisman@gmail.com"><span class="ic">+</span>alp.sisman@gmail.com</a>
+      </div>
+      <div class="footcol">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a><a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footcol">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn — Studio <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/alp-sisman-68a604226/" target="_blank" rel="noopener">LinkedIn — Alp <span>↗</span></a>
+        <a href="https://seam.seamuk.com" target="_blank" rel="noopener">Seam Vision <span>↗</span></a>
+        <a href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Quotewright <span>↗</span></a>
+        <a href="https://misafir.seamuk.com" target="_blank" rel="noopener">Misafir <span>↗</span></a>
+        <a href="https://www.homepages.ucl.ac.uk/~zceisis/index.html" target="_blank" rel="noopener">Web CV <span>↗</span></a>
+      </div>
+    </div>
+    <div class="footmark rv">
+      <div class="wm">seam<span class="r">®</span></div>
+      <div class="sub">Studio</div>
+    </div>
+    <div class="footbar">
+      <span>© <span id="yr">2026</span> seam® Studio. All rights reserved.</span>
+      <span class="links"><a href="contact.html">Contact</a><a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="bottomblur" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>

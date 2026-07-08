@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — seam®</title>
+<meta name="description" content="Notes from seam® Studio on design, automation, and systems that don’t fall over.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23131313'/><path d='M20 50h60' stroke='%23D2FF37' stroke-width='7' stroke-dasharray='11 9'/></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap navrow">
+    <a class="logo" href="index.html">seam<span style="font-size:.62em;vertical-align:.5em">®</span></a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="studio.html">Studio</a>
+      <a href="projects.html">Projects <sup>4</sup></a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobilemenu" id="mobilemenu">
+  <a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+</div>
+
+<div id="page">
+<main>
+
+  <div class="wrap pagehero">
+    <span class="label rv"><svg viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="7.5" stroke="currentColor" stroke-width="1.4"/><path d="M8.5 5v7M5 8.5h7" stroke="currentColor" stroke-width="1.4"/></svg>Notes</span>
+    <h1 class="mega rv" style="margin-top:20px">Blog.<span class="sup">(2)</span></h1>
+    <p class="lead rv">Occasional writing on design, automation, and running systems that don’t fall over. Written by the studio, from the studio’s own builds.</p>
+  </div>
+
+  <article class="article" id="where-systems-meet">
+    <h2 class="rv">Where systems meet: why we build the front and the back together</h2>
+    <div class="meta rv">July 2026 · Alp Şişman</div>
+    <div class="rv">
+      <p>Most websites are built as if the site is the product. It isn’t. The site is the visible edge of a system — behind it sit inboxes, reservation books, catalogues, spreadsheets, and the people who keep them moving. When a studio designs only the edge, the seams show up later: the contact form that emails an inbox nobody watches, the menu PDF that’s three updates behind, the “we’ll reply within 24 hours” promise that depends entirely on whether someone remembered to check.</p>
+      <p>Seam exists because we kept seeing the same failure from the other side. A manufacturer we work with received requests for quotes by email — multilingual, multi-message threads, some with spreadsheets attached. The website was fine. The system behind it was a person, reading every thread, cross-referencing a catalogue of six hundred items by hand. The bottleneck was never the design; it was the machinery the design was politely hiding.</p>
+      <p>So the studio’s rule is: <b>design the interface and the workflow as one thing.</b> When we build a hospitality site, the reservation flow, the review replies and the guest messages are part of the brief. When we build for a factory, the quote pipeline is part of the brief. The visible layer and the automation underneath ship together, tested together, owned by one accountable pair of hands.</p>
+      <p>The name is the thesis. A seam is where two panels are stitched into one piece of work — if it’s done well, you barely see it; if it’s done badly, it’s the first thing that tears.</p>
+    </div>
+    <hr>
+  </article>
+
+  <article class="article" id="draft-first-ai" style="padding-top:0">
+    <h2 class="rv">Draft-first AI: automation with a human approval gate</h2>
+    <div class="meta rv">July 2026 · Alp Şişman</div>
+    <div class="rv">
+      <p>Every automation we ship follows the same pattern: <b>trigger → reason → draft → human gate.</b> The system reads the input, does the thinking, produces a complete draft — and then stops. A person approves before anything leaves the building in the business’s name.</p>
+      <p>This isn’t caution for its own sake. In our quoting system, Quotewright, the hard rule is that <b>the machine never invents a price.</b> Every number in a draft quote is a real catalogue value; anything uncatalogued is named, flagged, and routed to the sales team. When we validated it against the manufacturer’s real historical quotes, it reproduced them to the cent — and when a test deliberately pushed it to fabricate a surcharge, it refused. That refusal is the feature.</p>
+      <p>The same gate runs through Misafir, our hospitality concierge. It drafts replies to reviews and guest messages in the guest’s own language, but nothing posts without sign-off. A restaurant’s voice is its reputation; the owner keeps the send button.</p>
+      <p>What surprised us is that the gate doesn’t slow things down — it speeds them up. Approving a good draft takes seconds. Writing from scratch takes minutes and gets skipped on busy days. The human stops being the bottleneck and becomes the editor, which is where human judgment actually earns its keep.</p>
+      <p>If you’re automating anything customer-facing, our advice is simple: let the machine do the reading, the matching and the writing — and keep a person on the send button until the system has earned otherwise, line by line.</p>
+    </div>
+  </article>
+
+  <section style="padding-top:0">
+    <div class="wrap" style="text-align:center">
+      <a class="pill rv" href="contact.html">Talk to the studio</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contactrow" style="margin-top:0">
+      <div>
+        <div class="phone">London / İstanbul</div>
+        <a class="bigmail" href="mailto:alp.sisman@gmail.com"><span class="ic">+</span>alp.sisman@gmail.com</a>
+      </div>
+      <div class="footcol">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a><a href="studio.html">Studio</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footcol">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn — Studio <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/alp-sisman-68a604226/" target="_blank" rel="noopener">LinkedIn — Alp <span>↗</span></a>
+        <a href="https://seam.seamuk.com" target="_blank" rel="noopener">Seam Vision <span>↗</span></a>
+        <a href="https://quotewright.seamuk.com" target="_blank" rel="noopener">Quotewright <span>↗</span></a>
+        <a href="https://misafir.seamuk.com" target="_blank" rel="noopener">Misafir <span>↗</span></a>
+        <a href="https://www.homepages.ucl.ac.uk/~zceisis/index.html" target="_blank" rel="noopener">Web CV <span>↗</span></a>
+      </div>
+    </div>
+    <div class="footmark rv">
+      <div class="wm">seam<span class="r">®</span></div>
+      <div class="sub">Studio</div>
+    </div>
+    <div class="footbar">
+      <span>© <span id="yr">2026</span> seam® Studio. All rights reserved.</span>
+      <span class="links"><a href="contact.html">Contact</a><a href="https://www.linkedin.com/company/koruseruk/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="bottomblur" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>
