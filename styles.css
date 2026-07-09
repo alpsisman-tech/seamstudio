@@ -492,3 +492,19 @@ footer{padding:clamp(60px,8vw,100px) 0 0}
 .rv.in{opacity:1;transform:none;filter:none}
 @media (prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none;filter:none;transition:none} html{scroll-behavior:auto} }
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+
+
+/* ── Cookie consent banner ───────────────────────────────────────────────── */
+.cookie-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:14px;transform:translateY(130%);transition:transform .32s cubic-bezier(.22,1,.36,1)}
+.cookie-consent.is-open{transform:translateY(0)}
+.cc-inner{max-width:960px;margin:0 auto;background:#131313;color:#ffffff;border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:15px 18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:0 12px 44px rgba(0,0,0,.30)}
+.cc-text{margin:0;font-size:14px;line-height:1.5;flex:1 1 300px}
+.cc-text a{color:#D2FF37;text-decoration:underline;text-underline-offset:2px}
+.cc-actions{display:flex;gap:10px;flex-shrink:0}
+.cc-btn{cursor:pointer;font:inherit;font-size:14px;font-weight:600;padding:9px 20px;border-radius:100px;border:1px solid transparent;transition:transform .15s ease,filter .15s ease,background .15s ease}
+.cc-btn:hover{transform:translateY(-1px)}
+.cc-decline{background:transparent;color:#ffffff;border-color:rgba(255,255,255,.16)}
+.cc-decline:hover{border-color:#ffffff}
+.cc-accept{background:#D2FF37;color:#131313;border-color:#D2FF37}
+.cc-accept:hover{filter:brightness(1.06)}
+@media (max-width:520px){.cc-inner{padding:14px}.cc-actions{width:100%}.cc-btn{flex:1}}
