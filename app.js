@@ -34,30 +34,9 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* Framer-style lerp smooth scroll (desktop, motion-safe only) */
-  var page = document.getElementById('page');
-  if (page && !reduce && !coarse) {
-    page.classList.add('smooth');
-    var target = window.scrollY, current = target, raf;
-
-    function setHeight() {
-      document.body.style.height = page.getBoundingClientRect().height + 'px';
-    }
-    setHeight();
-    window.addEventListener('resize', setHeight);
-    window.addEventListener('load', setHeight);
-    setTimeout(setHeight, 700);           /* after fonts settle */
-    setInterval(setHeight, 2500);         /* accordion opens etc. */
-
-    function loop() {
-      target = window.scrollY;
-      current += (target - current) * 0.082;
-      if (Math.abs(target - current) < 0.05) current = target;
-      page.style.transform = 'translate3d(0,' + (-current.toFixed(2)) + 'px,0)';
-      raf = requestAnimationFrame(loop);
-    }
-    raf = requestAnimationFrame(loop);
-  }
+  /* Smooth scrolling is native now (html{scroll-behavior:smooth}). The old
+     transform-based scroll hijack was removed: translating #page every rAF frame
+     repainted the whole document and tanked FPS. Native scroll runs at 60fps+. */
 })();
 
 
