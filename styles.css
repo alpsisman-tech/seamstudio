@@ -488,7 +488,7 @@ footer{padding:clamp(60px,8vw,100px) 0 0}
 .footbar .links{display:flex;gap:26px}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease}
+.rv{opacity:0;transform:translateY(26px);filter:blur(0px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease}
 .rv.in{opacity:1;transform:none;filter:none}
 @media (prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none;filter:none;transition:none} html{scroll-behavior:auto} }
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
