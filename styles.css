@@ -508,3 +508,195 @@ footer{padding:clamp(60px,8vw,100px) 0 0}
 .cc-accept{background:#D2FF37;color:#131313;border-color:#D2FF37}
 .cc-accept:hover{filter:brightness(1.06)}
 @media (max-width:520px){.cc-inner{padding:14px}.cc-actions{width:100%}.cc-btn{flex:1}}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CRAFT PASS — bolder evolution (motion system · depth · micro-interactions)
+   Spring-based, GPU-friendly (transform/opacity), fully reduced-motion safe.
+   Keeps the Seam Studio DNA: white/ink, Inter, lime #D2FF37, dark inset panels.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root{
+  /* motion curves — ease-out (no elastic on UI); spring only for momentum bits */
+  --ease-out:cubic-bezier(.22,1,.36,1);        /* quint-ish, graceful settle */
+  --ease-out-soft:cubic-bezier(.33,1,.68,1);
+  --ease-spring:cubic-bezier(.34,1.4,.5,1);    /* slight overshoot, momentum only */
+  --z-nav:60; --z-toast:10001;                 /* toast sits above cookie banner */
+  --mx:50%; --my:35%;                           /* pointer-reactive light (JS sets) */
+  /* enable smooth height interpolation for FAQ/native details where supported */
+  interpolate-size:allow-keywords;
+}
+
+/* — typographic craft — optical sizing + pretty wrapping on prose — */
+body{font-optical-sizing:auto;text-rendering:optimizeLegibility}
+p,.lead,.desc,.sub,.note,.ans,.facebio p,.article p,.legal-wrap p{text-wrap:pretty}
+
+/* — pills: press feedback + spring dot + keyboard focus — */
+.pill{transition:transform .24s var(--ease-out),background .2s ease,box-shadow .24s var(--ease-out);will-change:transform}
+.pill:hover{transform:translateY(-1px) scale(1.03)}
+.pill:active{transform:translateY(0) scale(.97);transition-duration:.09s}
+.pill::after{transition:background .2s ease,transform .3s var(--ease-spring)}
+.pill:hover::after{transform:scale(1.35)}
+.pill.ghost:hover{box-shadow:0 4px 16px -8px rgba(0,0,0,.25)}
+.proj .bar .visit:active,.qcard .go2:active,.cc-btn:active{transform:scale(.96)}
+
+/* — nav: scroll-state hairline + animated lime underline — */
+header.nav{transition:box-shadow .3s ease,background .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+header.nav.scrolled{background:rgba(255,255,255,.82);border-bottom-color:var(--hair);box-shadow:0 6px 24px -18px rgba(0,0,0,.4)}
+.navlinks a::after{content:"";position:absolute;left:2px;right:2px;bottom:0;height:2px;border-radius:2px;background:var(--lime);
+  transform:scaleX(0);transform-origin:center;transition:transform .32s var(--ease-out)}
+.navlinks a:hover::after,.navlinks a[aria-current]::after{transform:scaleX(1)}
+.navlinks a:hover,.navlinks a[aria-current]{color:var(--ink)}
+.navrow .logo{transition:transform .3s var(--ease-out)}
+.navrow .logo:hover{transform:scale(1.04)}
+.mobilemenu a{transition:color .2s,transform .3s var(--ease-out)}
+.mobilemenu a:active{transform:translateX(4px)}
+
+/* — richer dark panels: inner top-light + soft elevation + pointer sheen — */
+.panel{box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 44px 90px -60px rgba(0,0,0,.7)}
+.panel.smoke::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(38% 46% at var(--mx) var(--my),rgba(210,255,55,.10),rgba(255,255,255,.05) 30%,transparent 66%);
+  opacity:.9;transition:opacity .5s ease;mix-blend-mode:screen}
+.panel.smoke>*{position:relative;z-index:1}
+.heropanel,.svcpanel,#contact.panel,.ctapanel{--my:30%}
+
+/* — cards: cohesive hover elevation + border-ink emphasis — */
+.qcard,.step,.post,.ccard,.proj .bar,.tcard{transition:transform .38s var(--ease-out),box-shadow .38s var(--ease-out),border-color .3s ease}
+.qcard:hover,.ccard:not(.imgcard):hover{transform:translateY(-4px);border-color:#D6D6D0;box-shadow:0 22px 40px -26px rgba(0,0,0,.28)}
+.step{transition:transform .38s var(--ease-out),box-shadow .38s var(--ease-out),background .3s ease}
+.step:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(0,0,0,.22)}
+.post:hover{border-color:#D6D6D0;box-shadow:0 26px 48px -28px rgba(0,0,0,.3)}
+.proj .bar:hover{transform:translateY(-2px);border-color:#D6D6D0;box-shadow:0 14px 28px -18px rgba(0,0,0,.22)}
+.qcard .go2,.footcol a,.bigmail{transition:color .2s ease,transform .28s var(--ease-out)}
+.qcard:hover .go2{transform:translateX(3px)}
+.ccard.imgcard{transition:transform .5s var(--ease-out)}
+.ccard.imgcard:hover{transform:scale(1.006)}
+
+/* — project image tiles: lime edge-glow on hover + magnetic tilt (JS, fine pointer) — */
+.proj .img{transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out);transform-style:preserve-3d}
+.proj:hover .img{box-shadow:0 30px 60px -34px rgba(0,0,0,.55),0 0 0 1px rgba(210,255,55,.28)}
+.tilt{transition:transform .18s var(--ease-out)}
+
+/* — service rows: arrow travel + row indent on hover — */
+.svcrow{transition:background .25s ease,padding-left .3s var(--ease-out)}
+.svcrow:hover{padding-left:12px}
+.svcrow .go{transition:background .2s,color .2s,transform .3s var(--ease-spring)}
+.svcrow:hover .go{transform:translateX(4px) rotate(0deg) scale(1.06)}
+.featlist li{transition:transform .3s var(--ease-out),color .2s ease}
+.featlist li:hover{transform:translateX(3px);color:var(--ink)}
+
+/* — form fields: crafted focus (lift + lime ring wash), inline validity — */
+.formcard input,.formcard textarea,.newsletter input,.contact-field{transition:box-shadow .22s var(--ease-out),background .22s ease,transform .22s var(--ease-out),border-color .2s ease}
+.formcard input:focus,.formcard textarea:focus{outline:none;background:#fff;box-shadow:0 0 0 2px var(--ink),0 0 0 6px rgba(210,255,55,.28);transform:translateY(-1px)}
+.formcard input:user-invalid,.formcard textarea:user-invalid{box-shadow:0 0 0 2px #C6472F}
+.newsletter input:user-invalid{border-bottom-color:#C6472F}
+.formcard .pill[data-loading]{pointer-events:none;opacity:.75}
+.formcard .pill[data-loading]::after{animation:qw-spin .7s linear infinite;background:var(--lime)}
+.newsletter .pill[data-loading]{pointer-events:none;opacity:.75}
+@keyframes qw-spin{to{transform:rotate(360deg)}}
+.form-status{font-size:13.5px;line-height:1.5;margin-top:14px;min-height:0;color:var(--soft)}
+.form-status.err{color:#C6472F;font-weight:500}
+.form-status.ok{color:var(--ink);font-weight:500}
+.formcard.sent,.newsletter form.sent{position:relative}
+
+/* — copy-to-clipboard chip (email) — */
+.copybtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 auto;
+  margin-left:4px;border:1px solid var(--hair);border-radius:50%;background:#fff;color:var(--soft);cursor:pointer;
+  transition:transform .22s var(--ease-out),border-color .2s,color .2s,background .2s}
+.copybtn:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
+.copybtn:active{transform:scale(.92)}
+.copybtn svg{width:17px;height:17px}
+.copybtn.copied{border-color:var(--lime);background:var(--lime);color:#111}
+
+/* — toast — */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,140%);z-index:var(--z-toast);
+  display:inline-flex;align-items:center;gap:9px;background:#131313;color:#fff;border:1px solid rgba(255,255,255,.14);
+  border-radius:100px;padding:11px 18px;font-size:13.5px;font-weight:500;box-shadow:0 18px 44px rgba(0,0,0,.34);
+  transition:transform .5s var(--ease-spring),opacity .3s ease;opacity:0;pointer-events:none;max-width:calc(100vw - 32px)}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast i{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:0 0 auto}
+
+/* — count-up: stabilise number width so it doesn't jitter during the tween — */
+.stat .n,.ring .val,.projstats .s{font-variant-numeric:tabular-nums}
+
+/* ── staggered scroll reveals — JS sets --rv-i on grouped .rv children ──────── */
+.rv{transition:opacity .8s var(--ease-out),transform .8s var(--ease-out),filter .8s ease;
+  transition-delay:calc(var(--rv-i,0)*70ms)}
+
+/* ── SIGNATURE HERO ENTRANCE — pure-CSS load animation, ends fully visible ──── */
+/* Content is visible by default; the animation only plays the arrival. If CSS
+   animations are unsupported or reduced-motion is on, everything shows at once. */
+@media (prefers-reduced-motion:no-preference){
+  .heropanel .wordmark{animation:hero-rise .9s var(--ease-out) both}
+  .heropanel .wordmark-sub{animation:hero-rise .9s var(--ease-out) .08s both}
+  .heropanel .heroservices li{animation:hero-rise .8s var(--ease-out) both}
+  .heropanel .heroservices li:nth-child(1){animation-delay:.16s}
+  .heropanel .heroservices li:nth-child(2){animation-delay:.24s}
+  .heropanel .heroservices li:nth-child(3){animation-delay:.32s}
+  .heropanel .heroservices li:nth-child(4){animation-delay:.40s}
+  .heropanel .plusrow span{animation:hero-fade 1s ease .5s both}
+  .heropanel .herotag{animation:hero-rise .9s var(--ease-out) .34s both}
+  .heropanel .herocard{animation:hero-pop .8s var(--ease-spring) .46s both}
+  .heropanel .herocopyright{animation:hero-fade 1s ease .7s both}
+  /* seam-line accent that draws down the hero once on arrival */
+  .heropanel::after{content:"";position:absolute;left:50%;top:14%;width:2px;height:0;z-index:0;pointer-events:none;
+    background:linear-gradient(180deg,transparent,rgba(210,255,55,.55) 20%,rgba(210,255,55,.55) 80%,transparent);
+    transform:translateX(-50%);animation:hero-seam 1.5s var(--ease-out) .2s both}
+}
+@keyframes hero-rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes hero-pop{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes hero-fade{from{opacity:0}to{opacity:1}}
+@keyframes hero-seam{0%{height:0;opacity:0}22%{opacity:.9}72%{height:60%;opacity:.5}100%{height:60%;opacity:0}}
+
+/* ── 404 / thanks: signature seam SVG (re-stitch / confirm) ─────────────────── */
+.seammark{display:block;width:min(300px,72vw);height:auto;margin:6px 0 4px;overflow:visible}
+.seammark .sm-panelL,.seammark .sm-panelR{transform-box:fill-box}
+@media (prefers-reduced-motion:no-preference){
+  .seammark .sm-panelL{animation:sm-joinL 3.6s var(--ease-out) infinite}
+  .seammark .sm-panelR{animation:sm-joinR 3.6s var(--ease-out) infinite}
+  .seammark .sm-seam{stroke-dasharray:5 5;stroke-dashoffset:120;animation:sm-stitch 3.6s ease-in-out infinite}
+  .seammark .sm-tick{stroke-dasharray:40;stroke-dashoffset:40;animation:sm-tick 3.6s ease-in-out infinite}
+}
+@keyframes sm-joinL{0%,12%{transform:translateX(-16px);opacity:.45}40%,88%{transform:none;opacity:1}100%{transform:translateX(-16px);opacity:.45}}
+@keyframes sm-joinR{0%,12%{transform:translateX(16px);opacity:.45}40%,88%{transform:none;opacity:1}100%{transform:translateX(16px);opacity:.45}}
+@keyframes sm-stitch{0%,30%{stroke-dashoffset:120}58%,88%{stroke-dashoffset:0}100%{stroke-dashoffset:120}}
+@keyframes sm-tick{0%,55%{stroke-dashoffset:40;opacity:0}70%{opacity:1}80%,90%{stroke-dashoffset:0;opacity:1}100%{opacity:0;stroke-dashoffset:40}}
+
+/* ── responsive fix: footer legal-links row overflowed <456px (pre-existing) ── */
+.footbar{gap:14px 24px}
+.footbar .links{flex-wrap:wrap}
+@media(max-width:560px){ .footbar .links{gap:12px 18px} .footbar{padding-bottom:132px} }
+
+/* ── contrast / a11y hardening ─────────────────────────────────────────────── */
+.footbar,.contactrow .phone,.form-status{color:var(--soft)} /* ≥4.5:1 on white */
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.copybtn:focus-visible,.pill:focus-visible{outline-offset:3px}
+@media (hover:hover){ .navlinks a,.footcol a{cursor:pointer} }
+
+/* honour reduced transparency / more contrast for chrome */
+@media (prefers-reduced-transparency:reduce){
+  header.nav{background:#fff;backdrop-filter:none}
+  header.nav.scrolled{background:#fff}
+  .bottomblur{display:none}
+  .tcard .meta{background:#fff;backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  .navlinks a::after{height:3px}
+  .qcard,.ccard,.post,.step{border-color:#B8B8B8}
+  header.nav{border-bottom:1px solid var(--ink)}
+}
+
+/* ── the umbrella reduced-motion guard for every craft-pass addition ────────── */
+@media (prefers-reduced-motion:reduce){
+  .pill,.pill::after,.navrow .logo,.qcard,.step,.post,.ccard,.proj .bar,.proj .img,.svcrow,.svcrow .go,
+  .featlist li,.qcard .go2,.mobilemenu a,.tilt,.copybtn,.formcard input,.formcard textarea,.newsletter input{
+    transition-duration:.001ms !important}
+  .pill:hover,.pill:active,.qcard:hover,.step:hover,.post:hover,.ccard.imgcard:hover,.proj .bar:hover,
+  .svcrow:hover,.svcrow:hover .go,.featlist li:hover,.qcard:hover .go2,.copybtn:hover{transform:none !important}
+  .panel.smoke::before{display:none}
+  .heropanel .wordmark,.heropanel .wordmark-sub,.heropanel .heroservices li,.heropanel .plusrow span,
+  .heropanel .herotag,.heropanel .herocard,.heropanel .herocopyright,.heropanel::after,
+  .seammark .sm-panelL,.seammark .sm-panelR,.seammark .sm-seam,.seammark .sm-tick{animation:none !important}
+  .rv{transition-delay:0ms !important}
+  .toast{transition:opacity .2s ease}
+  .formcard .pill[data-loading]::after,.newsletter .pill[data-loading]::after{animation:none}
+}
